@@ -1,7 +1,8 @@
 // "You can never understand everything. But, you should push yourself to understand the system."
 // - Ryan Dahl (Creator of Node JS)
+import { Configuration } from '@nuxt/types'
 
-export default {
+const nuxtConfig: Configuration = {
   mode: 'spa',
   /*
    ** Headers of the page
@@ -79,3 +80,5 @@ export default {
      */
   }
 }
+
+export default nuxtConfig
