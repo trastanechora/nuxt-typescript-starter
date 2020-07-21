@@ -73,5 +73,5 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
     VuetifyLogo
   }
 })
-export default class Home extends Vue {}
+export default class News extends Vue {}
 </script>

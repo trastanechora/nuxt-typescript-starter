@@ -13,3 +13,9 @@
     </v-flex>
   </v-layout>
 </template>
+
+<script lang="ts">
+import { Vue } from 'nuxt-property-decorator'
+
+export default class Inspire extends Vue {}
+</script>

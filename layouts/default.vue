@@ -41,11 +41,11 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
         <v-list-item @click.native="right = !right">
@@ -64,30 +64,36 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
+
+@Component({
+  name: 'default'
+})
+export default class DefaultLayout extends Vue {
+  clipped: boolean = false
+  drawer: boolean = false
+  fixed: boolean = false
+  miniVariant: boolean = false
+  right: boolean = false
+  rightDrawer: boolean = false
+  title: string = 'Nuxt + Typescript'
+  items: any = [
+    {
+      icon: 'mdi-apps',
+      title: 'Welcome',
+      to: '/'
+    },
+    {
+      icon: 'mdi-chart-bubble',
+      title: 'Inspire',
+      to: '/inspire'
+    },
+    {
+      icon: 'mdi-web',
+      title: 'News',
+      to: '/news'
     }
-  }
+  ]
 }
 </script>
