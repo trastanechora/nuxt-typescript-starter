@@ -7,7 +7,7 @@ Vue.use(Vuetify)
 
 describe('InspirePage', () => {
   test('is a Vue instance', () => {
-    const wrapper: any = mount(InspirePage, {
+    const wrapper = mount(InspirePage, {
       vuetify: new Vuetify()
     })
     expect(wrapper.isVueInstance()).toBeTruthy()

@@ -34,6 +34,7 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import { Article } from '~/@types'
 
 @Component({
   components: {
@@ -44,7 +45,7 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 export default class News extends Vue {
   isLoading: boolean = true
 
-  get articles(): any {
+  get articles(): Article[] {
     return this.$store.state.news.articles
   }
 

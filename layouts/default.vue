@@ -66,6 +66,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
+import { SidebarMenuItem } from '~/@types'
 
 @Component({
   name: 'default'
@@ -78,7 +79,7 @@ export default class DefaultLayout extends Vue {
   right: boolean = false
   rightDrawer: boolean = false
   title: string = 'Nuxt + Typescript'
-  items: any = [
+  items: SidebarMenuItem[] = [
     {
       icon: 'mdi-apps',
       title: 'Welcome',

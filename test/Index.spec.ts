@@ -7,7 +7,7 @@ Vue.use(Vuetify)
 
 describe('IndexPage', () => {
   test('is a Vue instance', () => {
-    const wrapper: any = mount(IndexPage, {
+    const wrapper = mount(IndexPage, {
       vuetify: new Vuetify(),
       stubs: {
         NuxtLink: RouterLinkStub
