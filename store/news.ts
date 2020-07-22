@@ -2,11 +2,12 @@
 // - Elon Musk
 
 import axios from 'axios'
+import { Article, NewsapiResponse, NewsState } from '~/@types'
 
 // =================================================
 // State
 // =================================================
-export const state = () => ({
+export const state = (): NewsState => ({
   articles: [
     {
       author: 'https://www.facebook.com/13ericralph31',
@@ -16,8 +17,6 @@ export const state = () => ({
         'A SpaceX Falcon 9 booster has broken a decades-old NASA Space Shuttle reuse record after successfully launching a South Korean military satellite and landing on drone ship Just Read The Instructions (JRTI). Meanwhile, CEO Elon Musk says that SpaceX also manag…',
       publishedAt: '2020-07-20T23:09:17Z',
       source: { id: null, name: 'Teslarati' },
-      id: null,
-      name: 'Teslarati',
       title:
         'SpaceX Falcon 9 breaks NASA Shuttle reuse record, catches full rocket nosecone - Teslarati',
       url:
@@ -32,7 +31,7 @@ export const state = () => ({
 // Mutations
 // =================================================
 export const mutations = {
-  setArticles(state: any, param: any) {
+  setArticles(state: NewsState, param: Article[]): void {
     state.articles = param
   }
 }
@@ -41,12 +40,12 @@ export const mutations = {
 // Actions
 // =================================================
 export const actions = {
-  async getNews(store: any) {
+  async getNews(store: any): Promise<void> {
     await axios({
       method: 'GET',
       url: `http://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${process.env.NEWS_API_KEY}`
     })
-      .then(async (response: any) => {
+      .then(async (response: NewsapiResponse) => {
         await store.commit('setArticles', response.data.articles)
         return true
       })
