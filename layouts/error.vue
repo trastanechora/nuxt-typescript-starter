@@ -30,12 +30,11 @@ export default class ErrorLayout extends Vue {
   pageNotFound: string = '404 Not Found'
   otherError: string = 'An error occurred'
 
-  @Prop()
-  error: any
+  @Prop() error: any
 }
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
 h1 {
   font-size: 20px;
 }
