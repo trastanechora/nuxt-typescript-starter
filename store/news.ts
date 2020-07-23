@@ -43,7 +43,7 @@ export const actions = {
   async getNews(store: any): Promise<void> {
     await axios({
       method: 'GET',
-      url: `http://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${process.env.NEWS_API_KEY}`
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${process.env.NEWS_API_KEY}`
     })
       .then(async (response: NewsapiResponse) => {
         await store.commit('setArticles', response.data.articles)
