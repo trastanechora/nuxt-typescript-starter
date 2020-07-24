@@ -80,6 +80,37 @@ const nuxtConfig: Configuration = {
     /*
      ** You can extend webpack config here
      */
+    optimizeCSS: true,
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        minSize: 10000,
+        maxSize: 200000
+      }
+    },
+    transpile: ['vuetify/lib']
+  },
+  purgeCSS: {
+    mode: 'webpack',
+    enabled: ({ isDev, isClient }: any) => !isDev && isClient, // or `false` when in dev/debug mode
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js'
+    ],
+    styleExtensions: ['.css'],
+    whitelist: ['body', 'html', 'nuxt-progress'],
+    extractors: [
+      {
+        extractor: class {
+          static extract(content: any) {
+            return content.match(/[A-z0-9-:\\/]+/g)
+          }
+        },
+        extensions: ['html', 'vue', 'js, ts']
+      }
+    ]
   }
 }
 
