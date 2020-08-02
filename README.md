@@ -17,6 +17,8 @@
 
 This template is intended for full Typescript use
 
+See deployed app of this template [here](https://nuxt-typescript-starter.netlify.app/).
+
 # Features
 
 - 🔥 Configurations are fully writen in Typescript (**No JavaScript** file on this repo!)
@@ -52,6 +54,8 @@ $ yarn start
 $ yarn generate
 ```
 
-# Note
+## Show your support
+
+Would you mind to give a ⭐️ if this project helped you :)
 
 If you meet any difficulties or have a question about this `Nuxt Typescript Starter` please create an issue and put `question` label on it, I would really happy to help :)
