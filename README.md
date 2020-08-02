@@ -28,7 +28,6 @@ This template is intended for full Typescript use
 - 🎨 Expressive, Dynamic, Robust CSS with **Stylus** support
 - 🎭 **Jest** integration ready Unit Test with 100% coverage as starting point (Vuetify and Vuex Integration included!)
 - ✨ **Progressive Web App** by default (Installable / Add to homescreen)
-- 🧹 **PurgeCSS** ready
 
 # Installation
 

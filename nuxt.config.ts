@@ -44,8 +44,7 @@ const nuxtConfig: Configuration = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv',
-    'nuxt-purgecss'
+    '@nuxtjs/dotenv'
   ],
   /*
    ** Axios module configuration
