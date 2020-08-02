@@ -1,5 +1,4 @@
 <p align="center" style="color: #343a40">
-  <img src="https://typescript.nuxtjs.org/assets/logo.svg" alt="emotion" height="150" width="150">
   <h1 align="center">nuxt-typescript-starter</h1>
 </p>
 <p align="center">
@@ -16,19 +15,28 @@
 
 > Nuxt + Typescript is awesome! :)
 
-## Features
+This template is intended for full Typescript use
 
-- 🔥 Configurations are fully writen in Typescript (**No JavaScript** file on repo!)
-- 💎 **Eslint** and **Prettier** integration
-- 🎨 **Vuetify** ready
-- 📦 **Vuex** Store management
-- 🌐 **Axios** Ready (With a sample to NewsAPI request)
-- ⚙ **DotEnv** Ready
+# Features
+
+- 🔥 Configurations are fully writen in Typescript (**No JavaScript** file on this repo!)
+- 💎 **Eslint** and **Prettier** integration ready
+- 🎨 **Vuetify** ready, an Amazing Material Design Component Framework
+- 📦 **Vuex** store management with intense typing usage example
+- 🌐 **Axios** ready (With a sample to NewsAPI request)
+- ⚙ **DotEnv** ready ofcourse!
 - 🎨 Expressive, Dynamic, Robust CSS with **Stylus** support
 - 🎭 **Jest** integration ready Unit Test with 100% coverage as starting point (Vuetify and Vuex Integration included!)
 - ✨ **Progressive Web App** by default (Installable / Add to homescreen)
+- 🧹 **PurgeCSS** ready
 
-## Build Setup
+# Installation
+
+Clone the repo, cd to directory then `yarn install`
+
+> Rename `example.env` to `.env` then fill the NEWS_API_KEY variable with your own token from [here](https://newsapi.org/).
+
+# Build Setup
 
 ```bash
 # install dependencies
@@ -45,4 +53,6 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# Note
+
+If you meet any difficulties or have a question about this `Nuxt Typescript Starter` please create an issue and put `question` label on it, I would really happy to help :)
