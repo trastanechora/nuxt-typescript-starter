@@ -68,10 +68,10 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import { SidebarMenuItem } from '~/@types'
 
-@Component({
-  name: 'default'
-})
+@Component
 export default class DefaultLayout extends Vue {
+  readonly name: string = 'default'
+
   clipped: boolean = false
   drawer: boolean = false
   fixed: boolean = false

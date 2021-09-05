@@ -14,12 +14,14 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes":false,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "@types/jest"]
+    "types": ["@types/node", "@types/jest"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
