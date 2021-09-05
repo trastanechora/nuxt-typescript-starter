@@ -50,9 +50,7 @@
       <v-list>
         <v-list-item @click.native="right = !right">
           <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
+            <v-icon light> mdi-repeat </v-icon>
           </v-list-item-action>
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
@@ -65,20 +63,20 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
-import { SidebarMenuItem } from '~/@types'
+import { Vue, Component } from 'nuxt-property-decorator';
+import { SidebarMenuItem } from '~/@types';
 
 @Component
 export default class DefaultLayout extends Vue {
-  readonly name: string = 'default'
+  readonly name: string = 'default';
 
-  clipped: boolean = false
-  drawer: boolean = false
-  fixed: boolean = false
-  miniVariant: boolean = false
-  right: boolean = false
-  rightDrawer: boolean = false
-  title: string = 'Nuxt + Typescript'
+  clipped: boolean = false;
+  drawer: boolean = false;
+  fixed: boolean = false;
+  miniVariant: boolean = false;
+  right: boolean = false;
+  rightDrawer: boolean = false;
+  title: string = 'Nuxt + Typescript';
   items: SidebarMenuItem[] = [
     {
       icon: 'mdi-apps',
@@ -95,6 +93,6 @@ export default class DefaultLayout extends Vue {
       title: 'News',
       to: '/news'
     }
-  ]
+  ];
 }
 </script>

@@ -1,8 +1,6 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-flex v-if="isLoading" xs12 sm8 md6>
-      Loading ...
-    </v-flex>
+    <v-flex v-if="isLoading" xs12 sm8 md6> Loading ... </v-flex>
     <v-flex v-else xs12 sm8 md6>
       <v-card v-for="(article, index) in articles" :key="index" class="my-5">
         <v-card-title class="headline">
@@ -31,10 +29,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-import { Article } from '~/@types'
+import { Vue, Component } from 'nuxt-property-decorator';
+import Logo from '~/components/Logo.vue';
+import VuetifyLogo from '~/components/VuetifyLogo.vue';
+import { Article } from '~/@types';
 
 @Component({
   components: {
@@ -43,15 +41,15 @@ import { Article } from '~/@types'
   }
 })
 export default class News extends Vue {
-  isLoading: boolean = true
+  isLoading: boolean = true;
 
   get articles(): Article[] {
-    return this.$store.state.news.articles
+    return this.$store.state.news.articles;
   }
 
   async mounted() {
-    await this.$store.dispatch('news/getNews')
-    this.isLoading = false
+    await this.$store.dispatch('news/getNews');
+    this.isLoading = false;
   }
 }
 </script>
