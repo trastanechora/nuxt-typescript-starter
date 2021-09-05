@@ -41,6 +41,8 @@ import { Article } from '~/@types';
   }
 })
 export default class News extends Vue {
+  readonly name: string = 'news';
+
   isLoading: boolean = true;
 
   get articles(): Article[] {

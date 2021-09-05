@@ -17,5 +17,7 @@
 <script lang="ts">
 import { Vue } from 'nuxt-property-decorator';
 
-export default class Inspire extends Vue {}
+export default class Inspire extends Vue {
+  readonly name: string = 'inspire';
+}
 </script>
