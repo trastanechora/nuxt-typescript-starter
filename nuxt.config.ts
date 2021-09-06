@@ -1,5 +1,5 @@
 const nuxtConfig = {
-  ssr: true,
+  ssr: false,
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
