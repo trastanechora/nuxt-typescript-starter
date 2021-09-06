@@ -56,7 +56,7 @@ export default class News extends Vue {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 .image-preview {
   width: 100%;
 }

@@ -1,8 +1,8 @@
 // “The first step is to establish that something is possible; then probability will occur”
 // - Elon Musk
 
-import axios from 'axios'
-import { Article, NewsapiResponse, NewsState } from '~/@types'
+import axios from 'axios';
+import { Article, NewsapiResponse, NewsState } from '~/@types';
 
 // =================================================
 // State
@@ -25,16 +25,16 @@ export const state = (): NewsState => ({
         'https://www.teslarati.com/wp-content/uploads/2020/07/ANASIS-II-Falcon-9-B1058-LC-40-072020-SpaceX-JRTI-landing-2-c-1024x465.jpg'
     }
   ]
-})
+});
 
 // =================================================
 // Mutations
 // =================================================
 export const mutations = {
   setArticles(state: NewsState, param: Article[]): void {
-    state.articles = param
+    state.articles = param;
   }
-}
+};
 
 // =================================================
 // Actions
@@ -46,11 +46,11 @@ export const actions = {
       url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${process.env.NEWS_API_KEY}`
     })
       .then(async (response: NewsapiResponse) => {
-        await store.commit('setArticles', response.data.articles)
-        return true
+        await store.commit('setArticles', response.data.articles);
+        return true;
       })
       .catch((error) => {
-        return error.response
-      })
+        return error.response;
+      });
   }
-}
+};

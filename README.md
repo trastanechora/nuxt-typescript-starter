@@ -27,7 +27,6 @@ See deployed app of this template [here](https://nuxt-typescript-starter.netlify
 - 📦 **Vuex** store management with intense typing usage example
 - 🌐 **Axios** ready (With a sample to NewsAPI request)
 - ⚙ **DotEnv** ready ofcourse!
-- 🎨 Expressive, Dynamic, Robust CSS with **Stylus** support
 - 🎭 **Jest** integration ready Unit Test with 100% coverage as starting point (Vuetify and Vuex Integration included!)
 - ✨ **Progressive Web App** by default (Installable / Add to homescreen)
 

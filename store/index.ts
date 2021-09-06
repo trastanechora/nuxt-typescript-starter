@@ -11,18 +11,18 @@
 // state defined as function
 export const state = () => ({
   pageTitle: ''
-})
+});
 
 // mutations defined as object
 export const mutations = {
   setPageTitle(state: any, param: string) {
-    state.pageTitle = param
+    state.pageTitle = param;
   }
-}
+};
 
 // this is root of store, mutations defined must unique
 export const actions = {
   setPageTitle(store: any, param: string) {
-    store.commit('setPageTitle', param)
+    store.commit('setPageTitle', param);
   }
-}
+};

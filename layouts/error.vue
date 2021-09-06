@@ -35,7 +35,7 @@ export default class ErrorLayout extends Vue {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 h1 {
   font-size: 20px;
 }
